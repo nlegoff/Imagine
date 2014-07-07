@@ -326,7 +326,7 @@ final class Image extends AbstractImage
         $this->applyImageOptions($this->imagick, $options, $path);
 
         // flatten only if image has multiple layers
-        if ((!isset($options['flatten']) || $options['flatten'] === true) && count($this->layers) > 1) {
+        if ((!isset($options['flatten']) || $options['flatten'] === true)) {
             $this->flatten();
         }
     }
